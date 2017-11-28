@@ -1,0 +1,7 @@
+{
+    "url": "kona.dev",
+    "watch": [
+        "dist/**/*.php",
+        "dist/**/*.twig"
+    ]
+}

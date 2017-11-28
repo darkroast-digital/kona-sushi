@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Viewport Meta -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Styles -->
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ css('app') }}">
+
+    <!-- Mobile Theme Colour -->
+
+    <meta name="theme-color" content="#1B1B1B">
+
+    <!-- Title and Description -->
+
+    <title>Kona Sushi | {% block title %}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="kona, sushi, windsor, walkerville, ontario">
+
+    <!-- Favicons -->
+    
+    <link rel="icon" href="{{ img('fav.png') }}">
+
+    <!-- Open Graph -->
+
+    <meta property="og:title" content="Kona Sushi">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="konasuhi.com">
+    <meta property="og:site_name" content="Kona Sushi">
+    <meta property="og:image" content="{{ img('ogimage.jpg') }}">
+
+</head>
+
+<body>
+
+    <!--[if IE]>
+      <div class="browserupgrade"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div>
+   <![endif]-->
+    
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <h6 class="loader__label"><span>K</span><span>o</span><span>n</span><span>a</span></h6>
+    </div>    
+
+    <div id="app">
+        
+        {{ snippet('nav') }}
+
+        {% block content %}
+            
+        {% endblock %}
+
+        <footer class="footer">
+            <grid>
+                <column is4>
+                    <h6>Contact</h6>
+                    <ul class="footer__contact">
+                        <li><i class="fa fa-map-marker"></i>1840 Wyandotte St E, <br>Windsor, ON N8Y 1E5</li>
+                        <li><i class="fa fa-phone"></i></i><img src="" draggable="false">519-997-4638</li>
+                    </ul>
+                </column>
+                <column is4>
+                    <h6>Navigation</h6>
+                    <ul class="footer__navigation">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <ul class="footer__socials">
+                        <li><a href="#0"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#0"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#0"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </column>
+                <column is4>
+                    <h6>Hours</h6>
+                    <ul class="footer__hours">
+                        <li><strong>Monday :</strong> 4pm - 9pm</li>
+                        <li><strong>Tuesday :</strong> 11:30am - 10pm</li>
+                        <li><strong>Wednesday :</strong> 11:30am - 10pm</li>
+                        <li><strong>Thursday :</strong> 11:30am - 10pm</li>
+                        <li><strong>Friday :</strong> 11:30am - 12am</li>
+                        <li><strong>Saturday :</strong> 11:30am - 12am</li>
+                        <li><strong>Sunday :</strong> 4pm - 9pm</li>
+                    </ul>
+                </column>
+            </grid>
+            <grid>
+                <column is6><p>Copyright {{ year() }} Kona Sushi</p></column>
+                <column is6><p class="attr">Website By <a href="https://darkroast.co" target="_blank">Darkroast Digital</a></p></column>
+            </grid>
+        </footer>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2inm9lRWoeKQIrnokE3TRNUUVTWBA-Bc"></script>
+    <script src="{{ js('app') }}"></script>
+</body>
+
+<!-- See You Space Cowboy... -->
+
+</html>
